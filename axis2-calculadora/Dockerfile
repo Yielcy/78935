@@ -1,4 +1,8 @@
-from ubuntu-jdk
+from ubuntu
+run apt-get update && apt-get install -y \
+openjdk-8-jdk \
+curl \
+unzip
 run curl -G https://dlcdn.apache.org/axis/axis2/java/core/1.8.0/axis2-1.8.0-bin.zip -o /opt/axis2.zip
 run unzip /opt/axis2.zip -d /opt
 env AXIS2_HOME=/opt/axis2-1.8.0
